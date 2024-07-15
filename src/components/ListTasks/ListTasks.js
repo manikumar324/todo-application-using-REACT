@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useDrag, useDrop } from 'react-dnd';
 import toast from 'react-hot-toast';
+import Draggable from 'react-draggable';
 
 const ListTasks = ({tasks,setTasks}) => {
     const[todos,setTodos]=useState([]);
@@ -109,7 +110,8 @@ const Header = ({text,bg,count})=>{
         toast("Task Removed",{icon:"☠️"})
     }
     return(
-        <div ref={drag} className={`relative p-4 mt-8 shadow-md rounded-md cursor-grab ${isDragging?"opacity-25":"opacity-100"}`}>
+        <Draggable>
+            <div ref={drag} className={`relative p-4 mt-8 shadow-md rounded-md cursor-grab ${isDragging?"opacity-25":"opacity-100"}`}>
             <p className=''>{task.name}</p>
             <button className='absolute bottom-4 right-1 text-slate-400' onClick={()=>{
                 handleRemove(task.id)
@@ -124,5 +126,6 @@ const Header = ({text,bg,count})=>{
             </svg>
             </button>
         </div>
+        </Draggable>
     )
  }
