@@ -3,7 +3,7 @@ module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
     screens: {
-      'sm': {'min': '760px', 'max': '768px'},
+      'sm': {'min': '601px', 'max': '768px'},
       // => @media (min-width: 640px and max-width: 767px) { ... }
 
       'md': {'min': '769px', 'max': '1023px'},
@@ -19,7 +19,7 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
-      "xs":{"min":"350px","max":"759px"}
+      "xs":{"min":"350px","max":"600px"}
     },
   },
   plugins: [],
