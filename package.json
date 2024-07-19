@@ -1,5 +1,5 @@
 {
-  "homepage": "https://manikumar324.github.io/todo-application-using-REACT",
+  "homepage":"https://manikumar324.github.io/todo-application-using-REACT",
   "name": "myapp",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
+    "react-beautiful-dnd": "^13.1.1",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
     "react-dnd-touch-backend": "^16.0.1",
@@ -15,6 +16,7 @@
     "react-draggable": "^4.4.6",
     "react-hot-toast": "^2.4.1",
     "react-scripts": "5.0.1",
+    "tailwindcss": "^3.4.6",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -44,7 +46,6 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1",
-    "tailwindcss": "^3.4.4"
+    "gh-pages": "^6.1.1"
   }
 }

@@ -16,8 +16,10 @@ const App = () => {
     }
   }, []);
 
+  const isMobile = window.innerWidth < 768;
+
   return (
-    <DndProvider backend={window.innerWidth < 768 ? TouchBackend : HTML5Backend}>
+    <DndProvider backend={isMobile ? TouchBackend : HTML5Backend}>
       <Toaster />
       <div className='bg-slate-100 w-screen min-h-screen flex flex-col items-center pt-20 gap-16'>
         <CreateTask tasks={tasks} setTasks={setTasks} />

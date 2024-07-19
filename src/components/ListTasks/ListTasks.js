@@ -8,6 +8,7 @@ const ListTasks = ({tasks,setTasks}) => {
     const[inProgress,setInprogress]=useState([]);
     const[closed,setClosed]=useState([]);
 
+    //Filter tasks based on their status whenever tasks change
     useEffect(()=>{
         const fTodos=tasks.filter((task)=>task.status === "todo")
         const finProgress=tasks.filter((task)=>task.status === "inProgress")
@@ -113,7 +114,8 @@ const Header = ({text,bg,count})=>{
         <Draggable>
             <div ref={drag} className={`relative p-4 mt-8 shadow-md rounded-md cursor-grab ${isDragging?"opacity-25":"opacity-100"}`}>
             <p className=''>{task.name}</p>
-            <button className='absolute bottom-4 right-1 text-slate-400' onClick={()=>{
+            <button className='absolute bottom-4 right-1 text-slate-400' 
+            onClick={()=>{
                 handleRemove(task.id)
             }}>
             <svg xmlns="http://www.w3.org/2000/svg" 
