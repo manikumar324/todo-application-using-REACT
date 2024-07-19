@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
 import toast from 'react-hot-toast';
+import PropTypes from 'prop-types';
 
 const Task = ({ task, tasks, setTasks }) => {
   const [{ isDragging }, drag] = useDrag(() => ({
@@ -29,5 +30,11 @@ const Task = ({ task, tasks, setTasks }) => {
     </div>
   );
 }
+
+Task.propTypes = {
+  task: PropTypes.object.isRequired,
+  tasks: PropTypes.array.isRequired,
+  setTasks: PropTypes.func.isRequired,
+};
 
 export default Task;
