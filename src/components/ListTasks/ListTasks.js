@@ -1,7 +1,4 @@
 import React, { useEffect, useState } from 'react'
-// import { useDrag, useDrop } from 'react-dnd';
-// import toast from 'react-hot-toast';
-// import Draggable from 'react-draggable';
 import Section from './Section';
 
 
