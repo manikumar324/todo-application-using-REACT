@@ -23,12 +23,15 @@ const CreateTask = ({tasks,setTasks}) => {
         setTask({ id: "", name: "", status: "todo" }); //reset the task input
     }
   return (
-    <form onSubmit={handleSubmit}>
+    <>
+        <h1 className='sm:text-xl font-bold lg:text-xl lg:font-bold'>TO - DO LIST APPLICATION</h1>
+        <form onSubmit={handleSubmit}>
         <input type='text' value={task.name} className='border-2 border-slate-400 bg-slate-100 rounded-md mr-4 h-10 lg:w-64 px-1 md:w-64 sm:w-[220px] w-[150px]'
             onChange={(e)=>setTask({...task,id:uuidv4(),name:e.target.value})}
         />
         <button className='bg-cyan-500 text-white px-4 h-10 rounded-md'>Create</button>
-    </form>
+        </form>
+    </>
   )
 }
 
